@@ -37,10 +37,13 @@
                         <a class="nav-link" href="{{route('appointment')}}">Appointments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Doctors</a>
+                        <a class="nav-link" href="{{route('search')}}">Search</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="{{route('doctor')}}">Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('about')}}">About</a>
                     </li>
                 </ul>
             </div>
