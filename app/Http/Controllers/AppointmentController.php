@@ -41,8 +41,15 @@ class AppointmentController extends Controller
     public function search()
     {
         $r = request();
-        $date = $r -> input('appointmentDate');
+        $date = $r -> input('appointmentDate', now()->format('Y-m-d'));
         $appointments = Patient::where('appointmentDate', $date) -> get();
+        return view('search', ['appointments' => $appointments, 'selectedDate' => $date]);
+    }
+
+    public function all()
+    {
+        $date = "all records found in database";
+        $appointments = Patient::all();
         return view('search', ['appointments' => $appointments, 'selectedDate' => $date]);
     }
 }

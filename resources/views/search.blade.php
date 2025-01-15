@@ -14,7 +14,7 @@
         @csrf
         <div class="mb-3">
             <label for="appointmentDate" class="form-label">Select Date:</label>
-            <input type="date" id="appointmentDate" name="appointmentDate" class="form-control" required value="{{ old('appointmentDate', $selectedDate ?? '') }}">
+            <input type="date" id="appointmentDate" name="appointmentDate" class="form-control" required value="{{ old('appointmentDate', $selectedDate ?? date('Y-m-d')) }}">
         </div>
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
@@ -32,6 +32,7 @@
                         <th>No.</th>
                         <th>Patient Name</th>
                         <th>Contact Number</th>
+                        <th>Date</th>
                         <th>Time</th>
                         <th>Doctor</th>
                     </tr>
@@ -42,6 +43,7 @@
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $appointment->name }}</td>
                             <td>{{ $appointment->contactNumber }}</td>
+                            <td>{{ $appointment->appointmentDate }}</td>
                             <td>{{ $appointment->appointmentTime }}</td>
                             <td>{{ $appointment->doctor }}</td>
                         </tr>

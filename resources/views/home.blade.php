@@ -36,9 +36,9 @@
             <div class="card">
                 <img src="/images/service.png" class="img-fluid" width="120" height="200" alt="Service">
                 <div class="card-body">
-                    <h5 class="card-title">Services</h5>
-                    <p class="card-text">We offer a variety of healthcare services to meet your needs.</p>
-                    <a href="#" class="btn btn-primary">View Services</a>
+                    <h5 class="card-title">Record</h5>
+                    <p class="card-text">Check the appointment records in our database.</p>
+                    <a href="{{route('search.all')}}" class="btn btn-primary">View Records</a>
                 </div>
             </div>
         </div>
