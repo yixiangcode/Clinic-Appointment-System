@@ -52,4 +52,5 @@ class AppointmentController extends Controller
         $appointments = Patient::all();
         return view('search', ['appointments' => $appointments, 'selectedDate' => $date]);
     }
+    
 }
